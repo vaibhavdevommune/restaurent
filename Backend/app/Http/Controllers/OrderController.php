@@ -24,15 +24,15 @@ class OrderController extends Controller
         $order = Order::create([
             'customer_name' => $validated['customer_name'],
             'table_number' => $validated['table_number'],
-            'total_amount' => 1000, // You can calculate this dynamically based on the menu items selected
-            'status' => 'Pending', // Or default status
+            'total_amount' => 1000, 
+            'status' => 'Pending', 
         ]);
 
-        // Assuming you have a pivot or a separate table for order items
+     
         $order->orderItems()->create([
             'menu_item_id' => $validated['menu_item'],
             'quantity' => $validated['quantity'],
-            'price' => 100, // You should calculate the price based on the menu item
+            'price' => 100, 
         ]);
 
         return response()->json($order, 201);

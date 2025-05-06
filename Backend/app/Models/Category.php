@@ -9,13 +9,11 @@ class Category extends Model
 {
     use HasFactory;
 
+    // Define the table associated with the model
+    protected $table = 'categories';
+
+    // Define the fillable attributes
     protected $fillable = [
         'name',
     ];
-
-    // If you want to define relationship with MenuItem (later step)
-    public function menuItems()
-    {
-        return $this->hasMany(MenuItem::class);
-    }
 }
