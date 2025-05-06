@@ -3,6 +3,10 @@ body {
     background: #443627;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 h1,
 h2,
 h3,
@@ -10,7 +14,6 @@ h4,
 h5,
 h6 {
     color: #424242;
-    font-family: 'DM Sans', sans-serif;
 }
 
 body,
@@ -23,19 +26,89 @@ textarea,
 select,
 button {
     color: #7c7c7c;
-    font-family: 'DM Sans', sans-serif;
 }
 
 .sidebar {
-    h2{
+    h2 {
         color: #ffffff;
     }
 }
 
-body, p, span, li, label, input, textarea, select, button{
+body,
+p,
+span,
+li,
+label,
+input,
+textarea,
+select,
+button {
     color: unset;
 }
 
-.mainbar{
-    width: calc( 100% - 12px);
+.mainbar {
+    width: calc(100% - 12px);
+    max-height: 578px;
+    overflow-y: scroll;
+
+    scrollbar-width: thin;
+    scrollbar-color: #443627 #f1f1f1;
+}
+
+.mainbar::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 12px;
+}
+
+.mainbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 12px;
+}
+
+.mainbar::-webkit-scrollbar-thumb {
+    background: #443627;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.mainbar::-webkit-scrollbar-thumb:hover {
+    background: #6f6152;
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 1.575em;
+}
+
+div:where(.swal2-container) div:where(.swal2-html-container) {
+    font-size: 0.925em;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    font-size: 0.9rem;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel) {
+    font-size: 0.9rem;
+}
+
+.view-btn {
+    background: #d6e7f7;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #4671e9;
+}
+
+.delete-btn {
+    background: #f7d6d6;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #e94646;
 }

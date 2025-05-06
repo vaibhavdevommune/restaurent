@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaHome, FaShoppingCart, FaUtensils, FaUser, FaChartBar } from "react-icons/fa";
+import { FaHome,FaAsterisk, FaShoppingCart, FaUtensils, FaUser, FaChartBar } from "react-icons/fa";
 
 export default function Sidebar() {
   const location = useLocation();
@@ -7,13 +7,14 @@ export default function Sidebar() {
   const navItems = [
     { to: "/", label: "Dashboard", icon: <FaHome /> },
     { to: "/orders", label: "Orders", icon: <FaShoppingCart /> },
+    { to: "/category", label: "Category", icon: <FaAsterisk /> },
     { to: "/menu", label: "Menu", icon: <FaUtensils /> },
     { to: "/customers", label: "Customers", icon: <FaUser /> },
     { to: "/sales", label: "Sales Report", icon: <FaChartBar /> },
   ];
 
   return (
-    <div className="w-64 sidebar h-screen bg-[#443627] text-white p-6 space-y-6 font-dmSans">
+    <div className="w-64 sidebar bg-[#443627] text-white p-6 space-y-6 font-dmSans">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold text-[#FFB280]">Restaurant CRM</h2>
         {/* Mobile Hamburger Icon */}

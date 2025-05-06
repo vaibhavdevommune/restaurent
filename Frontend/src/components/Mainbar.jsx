@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import OrderMenu from "../pages/OrderMenu";
-import Menu from "../pages/Menu";
+import Menu from "../pages/MenuItems";
 import CustomerMenu from "../pages/CustomerMenu";
 import SalesReport from "../pages/SalesReport";
+import Category from "../pages/Category";
 
 export default function MainBar() {
   return (
@@ -15,6 +16,7 @@ export default function MainBar() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/customers" element={<CustomerMenu />} />
           <Route path="/sales" element={<SalesReport />} />
+          <Route path="/category" element={<Category />} />
         </Routes>
       </div>
     </main>

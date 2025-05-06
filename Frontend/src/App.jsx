@@ -4,16 +4,16 @@ import Navbar from "./components/Navbar";
 import Mainbar from "./components/Mainbar";
 import Dashboard from "./pages/Dashboard";
 import OrderMenu from "./pages/OrderMenu";
-import Menu from "./pages/Menu";
+import Menu from "./pages/MenuItems";
 import CustomerMenu from "./pages/CustomerMenu";
 import SalesReport from "./pages/SalesReport";
 
 export default function App() {
   return (
     <BrowserRouter> {/* Wrap your routes with BrowserRouter */}
-      <div className="flex h-screen">
+      <div className="flex">
         <Sidebar />
-        <div className="flex flex-col flex-1" style={{height: "98%"}}>
+        <div className="flex flex-col flex-1">
           <Navbar />
           <Mainbar/>
         </div>

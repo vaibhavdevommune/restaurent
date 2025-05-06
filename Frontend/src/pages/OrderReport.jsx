@@ -9,7 +9,7 @@ const OrderReport = () => {
     const fetchOrders = async () => {
       try {
         // Replace with your API endpoint
-        const response = await fetch("http://stock-backend.test/api/orders");
+        const response = await fetch("http://backend.test/api/orders");
         
         // Check if the request was successful
         if (!response.ok) {
@@ -53,9 +53,9 @@ const OrderReport = () => {
             orders.map((order) => (
               <tr key={order.id} className="border-b">
                 <td className="px-4 py-2">{order.id}</td>
-                <td className="px-4 py-2">{order.customerName}</td>
+                <td className="px-4 py-2">{order.customer_name}</td>
                 <td className="px-4 py-2">{order.status}</td>
-                <td className="px-4 py-2">₹{order.totalAmount}</td>
+                <td className="px-4 py-2">₹{order.total_amount}</td>
               </tr>
             ))
           ) : (

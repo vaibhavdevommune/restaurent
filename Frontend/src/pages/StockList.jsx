@@ -7,7 +7,7 @@ export default function StockList() {
 
   useEffect(() => {
     axios
-      .get("http://stock-backend.test/api/stocks") 
+      .get("http://backend.test/api/stocks") 
       .then((res) => {
         setStocks(res.data);
         setLoading(false); 
